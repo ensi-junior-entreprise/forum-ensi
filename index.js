@@ -18,7 +18,9 @@ const User = require('./models/register')
 const app = express()
 
 app.use(cors())
-
+app.get('/',(req,res)=>{
+  res.status(200).send('hello world')
+})
 app.post('/add',upload.single('file'), (req, res) => {
   fs.renameSync(req.file.path, req.file.path.replace('undefined', req.body.accord + req.body.nom));
   let data = req.body
@@ -40,4 +42,4 @@ app.post('/add',upload.single('file'), (req, res) => {
   })
 
 })
-app.listen(process.env.PORT,()=>console.log('okey'))
+app.listen(process.env.PORT,()=>console.log(process.env.PORT))
