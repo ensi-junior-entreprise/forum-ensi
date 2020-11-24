@@ -40,4 +40,4 @@ app.post('/add',upload.single('file'), (req, res) => {
   })
 
 })
-app.listen(1998,()=>console.log('okey'))
+app.listen(process.env.PORT,()=>console.log('okey'))
