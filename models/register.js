@@ -22,7 +22,7 @@ const Register = mongoose.model('register',{
         require :true
     },
     cv :{
-        type:String,
+        type:Boolean,
     },
 
 })
